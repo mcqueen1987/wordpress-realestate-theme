@@ -91,6 +91,7 @@ body:not(.custom-background-image):before {
     cursor: pointer;
 }
 .custom-button:hover {
+    transition: background 0.6s ease;
     background: rgb(113, 153, 69);
 }
 
