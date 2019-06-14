@@ -1,0 +1,414 @@
+body:not(.custom-background-image):before {
+    display: none;
+}
+
+#property-content {
+    background: #fff;
+    overflow-x: hidden;
+    color: #333;
+    font-size: 16px;
+    font-family: 'HKGroteskRegular';
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.lSSlideOuter {
+    /*transform: scale(1.8);*/
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.h1 {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.h2 {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.h4 {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.mask {
+    width: inherit;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.lslide.active + .lslide > .mask {
+    background: none;
+}
+
+.title-section, .feature-section, .description-section, .open-home {
+    padding: 12px 24px;
+}
+
+.address {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.priceView {
+    font-weight: 300;
+}
+
+.list-id {
+    font-weight: 900;
+}
+
+.button {
+    background: #7dc242;
+    margin: 16px 4px;
+    color: white;
+    text-align: center;
+    line-height: 2.6rem;
+}
+
+.custom-button {
+    background: #7dc242;
+    color: white;
+    cursor: pointer;
+}
+.custom-button:hover {
+    background: rgb(113, 153, 69);
+}
+
+.file {
+    margin-top: 8px;
+}
+
+.file > span {
+    color: #999;
+    margin-right: 10px;
+}
+
+.file > a {
+    color: #333;
+    text-decoration: none;
+}
+
+#map {
+    height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .s-3 {
+        max-width: 33.3%;
+        min-width: 33.3%;
+        flex-basis: 33.3%;
+        display: inline-block;
+    }
+
+    .s-6 {
+        max-width: 50%;
+        min-width: 50%;
+        flex-basis: 50%;
+        display: inline-block;
+    }
+
+    .s-9 {
+        max-width: 66%;
+        flex-basis: 66.6%;
+        min-width: 66.6%;
+        display: inline-block;
+    }
+
+    .s-12 {
+        max-width: 100%;
+        min-width: 100%;
+        display: inline-block;
+    }
+
+    .detail-container{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .m-3 {
+        max-width: 33%;
+        min-width: 33%;
+        flex-basis: 33.3%;
+        display: inline-block;
+    }
+
+    .m-6 {
+        max-width: 50%;
+        min-width: 50%;
+        flex-basis: 50%;
+        display: inline-block;
+    }
+
+    .m-9 {
+        max-width: 66%;
+        min-width: 66%;
+        flex-basis: 66.6%;
+        display: inline-block;
+    }
+
+    .m-12 {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .detail-container{
+        width: 70%;
+        margin: auto;
+        min-width: 768px;
+    }
+}
+.features {
+    margin-top: 8px;
+}
+
+.feature-icons {
+    margin-right: 25px;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    width: 30px;
+    height: 50px;
+    overflow: unset;
+}
+
+.icon-value{
+    color: #333;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: -14px;
+}
+
+.bedrooms {
+    background: url(../img/icons-sprite.png) -26px 0 no-repeat;
+}
+
+.property-features{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-title-property-features{
+    text-transform: uppercase;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    margin: 1em 0;
+    padding-bottom: 0.5em;
+}
+
+.open-home-details{
+    background-color: #F7F8FA;
+    margin-top: 30px;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.open-home-details-item{
+    margin: auto;
+    max-width: 160px;
+    color: #666666;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.open-home-header {
+    color: #000;
+    padding-top: 54px;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 1.3em;
+}
+
+.open-home-details-list{
+    display: flex;
+}
+
+.sales-agent {
+    background-color: #F7F8FA;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.agents-header {
+    color: #000;
+    padding-top: 54px;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 1.3em;
+}
+
+.agents-list{
+    width: 300px;
+    margin: auto;
+    display: flex;
+}
+
+.agents-item{
+    width: 230px;
+    color: #666666;
+    font-size: 18px;
+    line-height: 26px;
+    background-color: white;
+    margin: 4px;
+}
+
+.agent-contact{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    text-align: center;
+    color: #777777;
+    text-decoration: none;
+}
+
+.agent-name{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+.agent-phone-num {
+    color: #777;
+}
+
+.agent-phone-num:hover {
+    color: #333;
+}
+.agent-phone-icon > img {
+    width: 14px !important;
+    margin-bottom: 4px;
+}
+
+.agent-contact-container {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background-color: #7dc242;
+}
+.agent-contact-container > a {
+    color: white;
+    font-size: 14px;
+}
+
+.download-property-heading {
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 900;
+    font-family: 'HKGroteskRegular';
+}
+
+.month-day-date-col{
+    color: #333;
+    font-size: 16px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    margin-top: 2px;
+}
+
+.property-features div {
+    flex: 1 0 30%;
+    margin-left: 20px;
+    padding-left: 28px;
+    margin-bottom: .6em;
+    background: url(../img/list-icon.png) no-repeat;
+}
+
+.bathrooms {
+    background: url(../img/icons-sprite.png) 7px 0 no-repeat;
+}
+
+.garages {
+    background: url(../img/icons-sprite.png) -56px 0 no-repeat;
+}
+
+.attachment-links {
+    margin: 3px 0 0 0;
+}
+
+.attachment-links li {
+    list-style: none;
+    margin-bottom: .6em;
+    display: list-item;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 3px 0px 0px 32px;
+    background: url(../img/document.png) no-repeat left top;
+}
+.attachment-links li a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.open-home-details {
+    width: 100%;
+}
+
+
+/* Use Google's hosted "Open Sans" font as display font in button */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600");
+
+/* The button */
+.addeventatc {
+    text-transform: uppercase;
+    background: #7dc242;
+    color: #fff!important;
+    font-weight: 400;
+    padding: 5px 4px 5px 4px;
+    font-size: 12px;
+    display:inline-block;
+    position:relative;
+    text-align:center;
+    cursor:pointer;
+    font-family:"Open Sans",Roboto,"Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;text-decoration:none;}
+/*.addeventatc:hover 						{color:#fff;font-size:15px;text-decoration:none;background-color:#2c84f4;}*/
+/*.addeventatc .arrow 					{width:16px;height:16px;position:absolute;top:50%;right:15px;margin-top:-8px;background:url(../img/icon-arrow-t1.svg) no-repeat;background-size:16px 16px;}*/
+/*.addeventatc-selected 					{background-color:#2c84f4;}*/
+.addeventatc .start, .addeventatc .end, .addeventatc .timezone, .addeventatc .title, .addeventatc .description, .addeventatc .location, .addeventatc .organizer, .addeventatc .organizer_email, .addeventatc .facebook_event, .addeventatc .all_day_event, .addeventatc .date_format, .addeventatc .alarm_reminder, .addeventatc .recurring, .addeventatc .attendees, .addeventatc .calname, .addeventatc .uid, .addeventatc .status, .addeventatc .method, .addeventatc .client, .addeventatc .transp {display:none!important;}
+
+/* Drop down */
+.addeventatc_dropdown 					{width:230px;position:absolute;padding:6px 0px 0px 0px;font-family:"Open Sans",Roboto,"Helvetica Neue",Helvetica,Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;color:#000!important;font-weight:400;line-height:100%;background:#fff;font-size:15px;text-decoration:none;text-align:left;margin-left:-1px;display:none;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0,0,0,0.4) 0px 10px 26px;-moz-box-shadow:rgba(0,0,0,0.4) 0px 10px 26px;box-shadow:rgba(0,0,0,0.4) 0px 10px 26px;transform:scale(.98,.98) translateY(5px);z-index:-1;transition:transform .15s ease;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.addeventatc_dropdown.topdown 			{transform:scale(.98,.98) translateY(-5px)!important;}
+.addeventatc_dropdown span 				{display:block;line-height:100%;background:#fff;text-decoration:none;cursor:pointer;font-size:15px;color:#333;font-weight:400;padding:14px 10px 14px 55px;-webkit-transition:background-color .3s;transition:background-color .3s;}
+.addeventatc_dropdown span:hover 		{background-color:#f4f4f4;color:#000;text-decoration:none;font-size:15px;}
+.addeventatc_dropdown em 				{color:#999!important;font-size:12px!important;font-weight:400;}
+.addeventatc_dropdown .frs a 			{background:#fff;color:#cacaca!important;cursor:pointer;font-size:9px!important;font-style:normal!important;font-weight:400!important;line-height:110%!important;padding-left:10px;position:absolute;right:10px;text-align:right;text-decoration:none;top:5px;z-index:101;}
+.addeventatc_dropdown .frs a:hover 		{color:#999!important;}
+.addeventatc_dropdown .ateappleical 	{background:url(../img/icon-apple-t5.svg) 18px 40% no-repeat;background-size:22px 100%;}
+.addeventatc_dropdown .ategoogle 		{background:url(../img/icon-google-t5.svg) 18px 50% no-repeat;background-size:22px 100%;}
+.addeventatc_dropdown .ateoutlook 		{background:url(../img/icon-outlook-t5.svg) 18px 50% no-repeat;background-size:22px 100%;}
+.addeventatc_dropdown .ateoutlookcom 	{background:url(../img/icon-outlookcom-t5.svg) 18px 50% no-repeat;background-size:22px 100%;}
+.addeventatc_dropdown .ateyahoo 		{background:url(../img/icon-yahoo-t5.svg) 18px 50% no-repeat;background-size:22px 100%;}
+.addeventatc_dropdown .atefacebook 		{background:url(../img/icon-facebook-t5.svg) 18px 50% no-repeat;background-size:22px 100%;}
+.addeventatc_dropdown .copyx 			{height:21px;display:block;position:relative;cursor:default;}
+.addeventatc_dropdown .brx 				{height:1px;overflow:hidden;background:#e8e8e8;position:absolute;z-index:100;left:10px;right:10px;top:9px;}
+.addeventatc_dropdown.addeventatc-selected {transform:scale(1,1) translateY(0px);z-index:99999999999;}
+.addeventatc_dropdown.topdown.addeventatc-selected {transform:scale(1,1) translateY(0px)!important;}
+.addeventatc_dropdown .drop_markup 		{background-color:#f4f4f4;}
