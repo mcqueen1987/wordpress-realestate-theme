@@ -31,7 +31,7 @@ class property
         $attachmentId = array_keys($attach)[0];
         $xmlString = file_get_contents(get_attached_file($attachmentId));
         $originalXml = simplexml_load_string($xmlString);
-        $this->xml = $originalXml->residential[8];
+        $this->xml = $originalXml->residential[0];
     }
 
     /**
@@ -320,22 +320,22 @@ class property
      */
     private function renderPropertyFeatures(){
         $property = "";
-        if($this->xml->category->attributes()->name){
+        if(!empty($this->xml->category->attributes()->name)){
             $property .= "<div class='features-house-type'>" .$this->xml->category->attributes()->name ." </div>";
         }
-        if($this->xml->features->bathrooms){
+        if(!empty($this->xml->features->bathrooms)){
             $property .= "<div class='features-bathrooms'>" . $this->xml->features->bathrooms ." bath</div>";
         }
-        if($this->xml->buildingDetails->area){
+        if(!empty($this->xml->buildingDetails->area)){
             $property .= "<div class='features-building-size'> Floor Area is " . $this->xml->buildingDetails->area ." m² </div>";
         }
-        if($this->xml->features->bedrooms){
+        if(!empty($this->xml->features->bedrooms)){
             $property .= "<div class='features-bedrooms'>" . $this->xml->features->bedrooms ." bed</div>";
         }
-        if($this->xml->landDetails->area){
+        if(!empty($this->xml->landDetails->area)){
             $property .= "<div class='features-land-size'>Land is " . $this->xml->landDetails->area ." m²</div>";
         }
-        if($this->xml->features->garages){
+        if(!empty($this->xml->features->garages)){
             $property .= "<div class='features-garage'>" . $this->xml->features->garages ." Garage</div>";
         }
         return "
