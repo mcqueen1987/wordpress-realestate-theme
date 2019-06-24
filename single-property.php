@@ -27,11 +27,8 @@ class property
      */
     function __construct()
     {
-        $attach = get_attached_media('text/xml', get_the_ID());
-        $attachmentId = array_keys($attach)[0];
-        $xmlString = file_get_contents(get_attached_file($attachmentId));
-        $originalXml = simplexml_load_string($xmlString);
-        $this->xml = $originalXml->residential[0];
+        $content_post = get_post(get_the_ID());
+        $this->xml = simplexml_load_string($content_post->post_content);
     }
 
     /**
@@ -286,6 +283,9 @@ class property
     private function renderFeature()
     {
         $featureEle = $this->xml->features;
+        if(empty($featureEle)){
+            return "";
+        }
         $features = [];
         $id = $this->xml->uniqueID;
         foreach ($featureEle->children() as $child) {
@@ -402,6 +402,9 @@ class property
     private function renderLegal()
     {
         $extra = $this->xml->extraFields;
+        if(empty($extra)){
+            return "";
+        }
         $fields = '';
         foreach ($extra->children() as $f) {
             if (substr($f->attributes()->tag, 0, 5) == 'LEGAL') {
